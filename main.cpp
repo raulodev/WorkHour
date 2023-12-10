@@ -25,7 +25,6 @@ void updateTime(int &hours, int &minutes, int &seconds, bool &start)
 	while (start)
 	{
 		seconds += 1;
-		std::this_thread::sleep_for(std::chrono::seconds(1));
 
 		if (seconds == 60)
 		{
@@ -38,6 +37,8 @@ void updateTime(int &hours, int &minutes, int &seconds, bool &start)
 			hours += 1;
 			minutes = 0;
 		};
+
+		std::this_thread::sleep_for(std::chrono::seconds(1));
 	};
 }
 
