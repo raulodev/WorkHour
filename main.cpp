@@ -76,11 +76,13 @@ static void WorkHour(ImFont *font_inter_semibold, int &hours, int &minutes, int 
 	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
 	ImGui::PushFont(font_inter_semibold);
 
+	// timer
 	ImGui::SetCursorPosX((ImGui::GetWindowSize().x - ImGui::CalcTextSize("00 : 00 : 00").x) * 0.5f);
 	ImGui::TextWrapped("%s", time.c_str());
 	ImGui::PopFont();
 	ImGui::PopStyleColor();
 
+	// labels
 	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
 	ImGui::SetCursorPosX(83.0f);
 	ImGui::SetCursorPosY(130.0f);
@@ -95,6 +97,7 @@ static void WorkHour(ImFont *font_inter_semibold, int &hours, int &minutes, int 
 
 	ImGui::Dummy(ImVec2(0.0f, 20.0f));
 
+	// start buttons
 	std::string buttonText = start ? "Pause" : "Start";
 
 	ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.90f, 0.49f, 0.85f, 1.0f));
@@ -119,6 +122,7 @@ static void WorkHour(ImFont *font_inter_semibold, int &hours, int &minutes, int 
 
 	ImGui::SameLine();
 
+	// reset buttons
 	ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.34f, 0.26f, 0.38f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.41f, 0.34f, 0.45f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.41f, 0.34f, 0.45f, 1.0f));
