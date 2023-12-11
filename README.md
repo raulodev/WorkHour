@@ -2,7 +2,7 @@
 
 #### Preview
 
-![app](workhour.png)
+![app](workhour1-1-0.png)
 
 #### Build with CMake
 
